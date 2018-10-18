@@ -1,0 +1,43 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 27
+    defaultConfig {
+        applicationId "com.pku.xuzhimin.vrplayer"
+        minSdkVersion 21
+        targetSdkVersion 27
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.android.support:appcompat-v7:27.1.1'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.2'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:0.5'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:2.2.2'
+    //implementation 'com.google.android.exoplayer:exoplayer:2.8.0'
+    //implementation 'com.google.android.exoplayer:extension-cast:2.8.0'
+    implementation 'com.google.android.exoplayer:exoplayer-core:2.8.0'
+    implementation 'com.google.android.exoplayer:exoplayer-dash:2.8.0'
+    implementation 'com.google.android.exoplayer:exoplayer-ui:2.8.0'
+    /*implementation 'com.google.android.exoplayer:extension-gvr:2.8.0'
+    implementation 'com.google.android.exoplayer:extension-ima:2.8.0'
+    implementation 'com.google.android.exoplayer:extension-jobdispatcher:2.8.0'
+    implementation 'com.google.android.exoplayer:extension-leanback:2.8.0'
+    implementation 'com.google.android.exoplayer:extension-mediasession:2.8.0'
+    implementation 'com.google.android.exoplayer:extension-okhttp:2.8.0'
+    implementation 'com.google.android.exoplayer:extension-rtmp:2.8.0'
+    implementation 'com.google.android.exoplayer:exoplayer-hls:2.8.0'
+    implementation 'com.google.android.exoplayer:exoplayer-smoothstreaming:2.8.0'
+    */
+}
